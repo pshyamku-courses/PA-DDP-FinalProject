@@ -2,16 +2,12 @@
 title: "Trends in the primary causes of mortality in the U.S."
 author: "pshyamku-courses"
 date: "10/25/2020"
-output: ioslides_presentation
+output: 
+  ioslides_presentation: 
+    keep_md: yes
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-knitr::opts_chunk$set(tidy.opts=list(width.cutoff=60),tidy=TRUE)
-library(forecast)
-library(tsbox)
-library(ggplot2)
-```
+
 
 ## Motivation
 
@@ -28,10 +24,19 @@ This app makes predictions on future trends in mortality due to selected causes.
 
 This [dataset](https://healthdata.gov/dataset/nchs-age-adjusted-death-rates-selected-major-causes-death) has U.S. mortality since 1900. The dataset has three fields (1) Year (2) Cause ( one of Accidents, Cancer, Heart Disease, Influenza and Pneumonia, and Stroke) (3) Age adjusted Death Rate ([AADR](https://www.nlm.nih.gov/nichsr/stats_tutorial/section2/mod5_age.html)).
 
-```{r, echo = TRUE}
+
+```r
 data <- read.csv("Data/NCHS_-_AADR_Major_Causes_of_Death.csv")
 knitr::kable(head(data,3))
 ```
+
+
+
+| Year|Cause         | Age.Adjusted.Death.Rate|
+|----:|:-------------|-----------------------:|
+| 1900|Heart Disease |                   265.4|
+| 1901|Heart Disease |                   272.6|
+| 1902|Heart Disease |                   285.2|
 
 ## Overall App Layout
 The App consists of a side panel and a main panel. 
@@ -51,9 +56,4 @@ On the side panel,
 - Select a cause of death and a forecast time window.
 - Click on "Update forecast" to generate a forecast plot based on your selections of Cause and forecast time window.
 
-```{r, echo = FALSE, fig.height=3, fig.width=8, warning=FALSE, message=FALSE, error=FALSE}
-y<- subset(data, Cause == "Heart Disease", select = c(Year, Age.Adjusted.Death.Rate))
-fit <- ets(ts_ts(ts_long(y)), allow.multiplicative.trend = TRUE)
-autoplot(forecast(fit)) + ggtitle("10 year Forecast of Age Adjusted Death Rate for Heart Disease") +
-  xlab("Years") + ylab("Age Adjusted Death Rate") + theme(text = element_text(size=10))
-```
+![](index_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
