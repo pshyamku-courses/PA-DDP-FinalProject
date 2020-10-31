@@ -17,4 +17,4 @@ AGE-ADJUSTED DEATH RATE (AADR) is a death rate that controls for the effects of 
 The dataset was downloaded from [here](https://healthdata.gov/dataset/nchs-age-adjusted-death-rates-selected-major-causes-death) on October 31, 2020
 
 Click [here](https://pshyamku.shinyapps.io/pa-ddp-finalproject/) to access the shinyapp deployment
-Click [here]() to access the Pitch Presentation for the app.
+Click [here](https://pshyamku-courses.github.io/PA-DDP-FinalProject/#1) to access the Pitch Presentation for the app.
