@@ -20,9 +20,9 @@ shinyUI(fluidPage(
     # Sidebar with a slider input for number of bins
     sidebarLayout(
         sidebarPanel(
-            p("Select the disease for which you would like to forecast 
+            p("Select the cause of death for which you would like to forecast 
               death rates."),
-            selectInput("disease_name", "Major Disease:",
+            selectInput("disease_name", "Major Cause of Death:",
                         c("Heart Disease" = "Heart Disease",
                           "Cancer" = "Cancer",
                           "Accidents" = "Accidents",

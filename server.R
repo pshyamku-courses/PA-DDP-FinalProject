@@ -15,7 +15,7 @@ library(forecast)
 library(tsbox)
 library(plotly)
 
-data <- read.csv("Data/NCHS_-_Age-adjusted_Death_Rates_for_Selected_Major_Causes_of_Death.csv")
+data <- read.csv("Data/NCHS_-_AADR_Major_Causes_of_Death.csv")
 
 # Define server logic required to draw a histogram
 shinyServer(function(input, output) {
