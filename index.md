@@ -1,7 +1,7 @@
 ---
 title: "Trends in the primary causes of mortality in the U.S."
 author: "pshyamku-courses"
-date: "10/25/2020"
+date: "31 October, 2020"
 output: 
   ioslides_presentation: 
     keep_md: yes
